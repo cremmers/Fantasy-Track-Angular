@@ -1,0 +1,103 @@
+a {
+    text-decoration: none;
+}
+
+#big_logo {
+   width: 150px;
+   height: 150px;
+}
+
+.player {
+    background-color: #FFFFFF;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid gray;
+}
+
+.player h1, h2, h3, h4 {
+    color: #337ab7;
+}
+
+.player p {
+    color: #337ab7;
+    display: inline;
+}
+
+.stats_icon {
+    display: inline-block;
+    margin: 10px;
+}
+
+#player_button {
+    position: fixed;
+    top: 90px;
+    right: 50px;
+    z-index: 1;
+}
+
+.small_player {
+    background-color: #FFFFFF;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid gray;
+}
+
+.small_player h4, p {
+    color: #337ab7;
+}
+
+.small_headline {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.highlight {
+    background-color: #d3d3d3;
+    border: 1px solid grey;
+    z-index: 1;
+    transform: scale(1.01);
+}
+
+.yardage {
+    margin-right: 7px;
+    width: 100px;
+    height: 50px;
+    display: inline-block;
+}
+
+.touchdowns {
+    margin-right: 7px;
+    width: 100px;
+    height: 50px;
+    display: inline-block;
+}
+
+.better_projection {
+    margin-right: 7px;
+    width: 50px;
+    height: 50px;
+}
+
+.worse_projection {
+    margin-right: 7px;
+    width: 50px;
+    height: 50px;
+}
+
+.starter {
+    margin-right: 7px;
+    width: 50px;
+    height: 50px;
+}
+
+.bench_player {
+    margin-right: 7px;
+    width: 50px;
+    height: 50px;
+}

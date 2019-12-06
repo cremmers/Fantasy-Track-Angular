@@ -1,0 +1,21 @@
+<div>
+    <div class="container-fluid" id="page_background" role="main">      
+      <div class="row">
+         <div class="col-md-12 col-sm-12 col-xs-12" id="roster">			         
+            <ul class="list-group" id="team_list">            
+              <h1 id="team_header">{{team.name}}</h1>            
+                <a *ngFor="let player of team.players" routerLink="/playerdetail/{{player.id}}">
+                  <li class="list-group-item" appHighlight>                    			
+  	                <img class="logo" src="{{player.logo}}" />
+  	                <p><b> {{player.name}}</b></p>
+  	                <p><b> - {{player.position}}</b></p>
+  	                <p><b> - {{player.team}}</b></p>
+                    <app-stats [sendPlayer]="player"></app-stats>
+                  </li> 
+                </a>     			              					               			                                                         	
+            </ul>
+            <a routerLink='/' class="btn btn-success" id="back_home">Back to Home Page</a>			        
+         </div>			  
+      </div>
+    </div>
+</div>   			 

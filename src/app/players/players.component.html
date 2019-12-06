@@ -1,0 +1,75 @@
+<div>		       		       
+  <div class="container-fluid" id="page_background">
+  	<div class="row">
+  		<div class="col-md-6 col-sm-12 col-xs-12">
+  			<span id="player_header"><h1>Players</h1></span>
+        <!-- <a href="#roster" class="btn btn-info" id="team_button">Roster</a>		 -->
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="material-icons">search</i></span> 
+          </div>
+          <input type="text" class="form-control" [(ngModel)]="search" (ngModelChange)="searchFn($event)" placeholder="Find a player, position, or team." />
+        </div>
+        <ul class="list-group" id="player_list">
+        	<a href="#">
+        			<li class="list-group-item" *ngFor="let player of players" (click)="clickPlayer($event)" appHighlight>          
+		    	      <img class="logo" name="logo" src="{{player.logo}}" alt="{{player.alt}}" />
+		    	      <p name="name" id="{{player.id}}"> {{player.name}} </p>
+		    	      <p name="position"> - {{player.position}} </p>
+		    	      <p name="team"> - {{player.team}} </p>
+        			</li>
+        		</a>
+        </ul>
+	    </div>
+      <div class="col-md-6 col-sm-12 col-xs-12" id="roster">         
+         <span id="team_header"><h1>Roster</h1></span>
+          <!-- <a href="#player_header" class="btn btn-info" id="player_back">Back to Players</a> -->
+          <ul class="list-group" id="roster_list" #playerList>        	
+            <li class="list-group-item" id="p-1">
+              <p>QB</p>
+            </li>
+            <li class="list-group-item" id="p-2">
+              <p>RB1</p>
+            </li>
+            <li class="list-group-item" id="p-3">
+              <p>RB2</p>
+            </li>
+            <li class="list-group-item" id="p-4">
+              <p>WR1</p>
+            </li>
+            <li class="list-group-item" id="p-5">
+              <p>WR2</p>
+            </li>
+            <li class="list-group-item" id="p-6">
+              <p>RB/WR/TE</p>
+            </li>
+            <li class="list-group-item" id="p-7">
+              <p>TE</p>
+            </li>				  
+          </ul>
+        <br/>
+        <div>
+          <form (ngSubmit)="saveTeam($event)" ngNativeValidate>
+            <div>
+              <input type="text" [(ngModel)]="team_name" placeholder="Enter a team name." name="team_name" required />
+              <button type="submit" class="btn btn-success" id="save_team">Save Team</button>
+            </div>              
+          </form>
+        </div>
+        <div>
+          <form *ngIf="team">
+            <select name="team" [(ngModel)]="team" [compareWith]="compareFn">
+              <option *ngFor="let team of teams" id="{{team.id}}" [ngValue]="team">{{team.name}}</option>
+            </select>
+            <input type="submit" (click)="loadTeam($event)" class="btn btn-primary" id="load_team" value="Load Team" />
+            <input type="submit" (click)="[deleteTeam($event), resetTeam($event)]" class="btn btn-danger" id="delete_team" value="Delete Team" />     
+          </form>
+        </div>
+        <div>
+          <a *ngIf="team" routerLink="/team" (click)="sendTeam($event)" class="btn btn-success" id="team_page">Go To Team Page</a>
+          <button (click)="resetTeam($event)" class="btn btn-danger" id="reset_team">Reset Team</button>
+        </div> 
+      </div>
+  	</div>         
+  </div>
+</div>

@@ -1,0 +1,196 @@
+<div>
+	<div class="container-fluid" id="page_background" role="main">      
+	  <div class="row">
+	     <div class="col-md-12 col-sm-12 col-xs-12">
+	        <div *ngIf="player" class="card-outline-primary text-center player">
+	          <img class="card-img-top" id="big_logo" src={{player.logo}} alt={{player.alt}} />
+	          <div class="card-block">
+	            <h2 class="card-title">{{player.name}}</h2>                  
+	            <h3 class="card-text"> {{player.position}} - {{player.team}}</h3>
+	            <br />
+	            <div class="card-text" *ngFor="let stat of stats">
+					<div *ngIf="QB">
+						<h4>Projected 2019 Stats: </h4>
+				  		<p><b>Passing Yards: {{stat.YDS.toFixed()}}, Passing Touchdowns: {{stat.TDS.toFixed()}}, Interceptions: {{stat.INTS.toFixed()}}, Rushing Yards: {{stat.YDS_1.toFixed()}}, Rushing Touchdowns: {{stat.TDS_1.toFixed()}}, Fumbles: {{stat.FL.toFixed()}}</b></p>
+				  	</div>
+				  	<div *ngIf="RB">
+				  		<h4>Projected 2019 Stats: </h4>
+				  		<p><b>Rushing Yards: {{stat.YDS.toFixed()}}, Rushing Touchdowns: {{stat.TDS.toFixed()}}, Fumbles: {{stat.FL.toFixed()}}, Receptions: {{stat.REC.toFixed()}}, Receiving Yards: {{stat.YDS_1.toFixed()}}, Receiving Touchdowns: {{stat.TDS_1.toFixed()}}</b></p>
+				  	</div>
+				  	<div *ngIf="WR">
+				  		<h4>Projected 2019 Stats: </h4>
+				  		<p><b>Receptions: {{stat.REC.toFixed()}}, Receiving Yards: {{stat.YDS.toFixed()}}, Receiving Touchdowns: {{stat.TDS.toFixed()}}, Fumbles: {{stat.FL.toFixed()}}</b></p>
+				  	</div>
+				  	<div *ngIf="TE">
+				  		<h4>Projected 2019 Stats: </h4>
+				  		<p><b>Receptions: {{stat.REC.toFixed()}}, Receiving Yards: {{stat.YDS.toFixed()}}, Receiving Touchdowns: {{stat.TDS.toFixed()}}, Fumbles: {{stat.FL.toFixed()}}</b></p>
+				  	</div>
+				</div>
+				<br />
+	            <div class="card-text" *ngFor="let number of numbers">
+					<div *ngIf="QB && number.id != 2562619">
+						<h4>2019 Stats: </h4>
+				  		<p><b>Passing Yards: {{number.stats[5]}}, </b></p>
+				  		<p  *ngIf="number.stats[6];else noPassTDs"><b>Passing Touchdowns: {{number.stats[6]}},  </b></p><ng-template #noPassTDs><p><b>Passing Touchdowns: 0, </b></p></ng-template>
+				  		<p *ngIf="number.stats[7];else noInts"><b>Interceptions: {{number.stats[7]}}, </b></p><ng-template #noInts><p><b>Interceptions: 0, </b></p></ng-template>
+				  		<p  *ngIf="number.stats[14];else noRushYDs"><b>Rushing Yards: {{number.stats[14]}}, </b></p><ng-template #noRushYDs><p><b>Rushing Yards: 0, </b></p></ng-template>
+				  		<p  *ngIf="number.stats[15];else noRushTDs"><b>Rushing Touchdowns: {{number.stats[15]}}, </b></p><ng-template #noRushTDs><p><b>Rushing Touchdowns: 0, </b></p></ng-template>
+				  		<p *ngIf="number.stats[31];else noFums"><b>Fumbles: {{number.stats[31]}}</b></p><ng-template #noFums><p><b> Fumbles: 0</b></p></ng-template>
+				  		<br/>
+				  		<div class="stats_icon">
+				  			<h4 class="card-text" *ngIf="number.stats[5] >= 2750"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/AmFBfield.svg" alt="football field" class="yardage"/><b>4000 yard passing pace!</b></h4>
+				  		</div>
+				  		<div class="stats_icon">
+				  			<h4 class="card-text" *ngIf="number.stats[6] >= 21 || +number.stats[6] + +number.stats[15] >= 21"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Scoreboard_FB.JPG" alt="scoreboard" class="touchdowns"/><b>30 total touchdowns pace!</b></h4>
+				  		</div>
+				  		<div class="stats_icon" *ngFor="let stat of stats">
+				  			<h4 class="card-text" *ngIf="stat.FPTS < number.seasonPts * 1.4;else worseProjected"><img src="https://upload.wikimedia.org/wikipedia/commons/8/81/Simpleicons_Business_rising-bar-graph-with-arrow-up.svg" alt="graph going up" class="better_projection"/><b>Better than projected!</b></h4>	
+	        				<ng-template #worseProjected><h4 class="card-text"><img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Octicons-arrow-down.svg" alt="arrow down" class="worse_projection"/><b>Worse than projected.</b></h4></ng-template>
+	        			</div>
+	        			<div class="stats_icon">
+	        				<h4 class="card-text" *ngIf="number.seasonPts > 185;else benchPlayer"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/American_football_icon.svg"alt="football helmet" class="starter"/><b>Starter</b></h4>
+	        				<ng-template #benchPlayer><h4 class="card-text"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/ClipboardClipart.svg" alt="clipboard" class="bench_player"/><b>Bench Player</b></h4></ng-template>
+	        			</div>		
+				  	</div>
+				  	<div *ngIf="RB">
+				  		<h4>2019 Stats: </h4>
+				  		<p><b>Rushing Yards: {{number.stats[14]}}, </b></p>
+				  		<p  *ngIf="number.stats[15];else noRushTDs"><b>Rushing Touchdowns: {{number.stats[15]}}, </b></p><ng-template #noRushTDs><p><b>Rushing Touchdowns: 0, </b></p></ng-template>
+				  		<p *ngIf="number.stats[31];else noFums"><b>Fumbles: {{number.stats[31]}}, </b></p><ng-template #noFums><p><b>Fumbles: 0, </b></p></ng-template>
+				  		<p *ngIf="number.stats[20];else noRecs"><b>Receptions: {{number.stats[20]}}, </b></p><ng-template #noRecs><p><b>Receptions: 0, </b></p></ng-template>
+				  		<p *ngIf="number.stats[15];else noRecYDs"><b>Receiving Yards: {{number.stats[21]}}, </b></p><ng-template #noRecYDs><p><b>Receiving Yards: 0, </b></p></ng-template>
+				  		<p *ngIf="number.stats[22];else noRecTDs"><b>Receiving Touchdowns: {{number.stats[22]}}</b></p><ng-template #noRecTDs><p><b>Receiving Touchdowns: 0</b></p></ng-template>
+				  		<br/>
+				  		<div class="stats_icon">
+				  			<h4 class="card-text" *ngIf="number.stats[14] >= 687"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/AmFBfield.svg" alt="football field" class="yardage"/><b>1000 yard rushing pace!</b></h4>
+				  		</div>
+				  		<div class="stats_icon">
+				  			<h4 class="card-text" *ngIf="number.stats[15] >= 7 || +number.stats[15] + +number.stats[22] >= 7"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Scoreboard_FB.JPG" alt="scoreboard" class="touchdowns"/><b>10 total touchdowns pace!</b></h4>
+				  		</div>
+				  		<div class="stats_icon" *ngFor="let stat of stats">
+				  			<h4 class="card-text" *ngIf="stat.FPTS < number.seasonPts * 1.4;else worseProjected"><img src="https://upload.wikimedia.org/wikipedia/commons/8/81/Simpleicons_Business_rising-bar-graph-with-arrow-up.svg" alt="graph going up" class="better_projection"/><b>Better than projected!</b></h4>	
+	        				<ng-template #worseProjected><h4 class="card-text"><img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Octicons-arrow-down.svg" alt="arrow down" class="worse_projection"/><b>Worse than projected.</b></h4></ng-template>
+	        			</div>
+	        			<div class="stats_icon">
+	        				<h4 class="card-text" *ngIf="number.seasonPts > 130;else benchPlayer"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/American_football_icon.svg"alt="football helmet" class="starter"/><b>Starter</b></h4>
+	        				<ng-template #benchPlayer><h4 class="card-text"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/ClipboardClipart.svg" alt="clipboard" class="bench_player"/><b>Bench Player</b></h4></ng-template>
+	        			</div>		
+				  	</div>
+				  	<div *ngIf="WR && number.id != 2535687">
+				  		<h4>2019 Stats: </h4>
+				  		<p><b>Receptions: {{number.stats[20]}}, </b></p>
+				  		<p><b>Receiving Yards: {{number.stats[21]}}, </b></p>
+				  		<p *ngIf="number.stats[22];else noRecTDs"><b>Receiving Touchdowns: {{number.stats[22]}}, </b></p><ng-template #noRecTDs>
+				  		<p><b>Receiving Touchdowns: 0, </b></p></ng-template><p *ngIf="number.stats[31];else noFums"><b>Fumbles: {{number.stats[31]}}</b></p><ng-template #noFums><p><b>Fumbles: 0</b></p></ng-template>
+				  		<br/>
+				  		<div class="stats_icon">
+				  			<h4 class="card-text" *ngIf="number.stats[21] >= 687"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/AmFBfield.svg" alt="football field" class="yardage"/><b>1000 yard receiving pace!</b></h4>
+				  		</div>
+				  		<div class="stats_icon">
+				  			<h4 class="card-text" *ngIf="number.stats[22] >= 7"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Scoreboard_FB.JPG" alt="scoreboard" class="touchdowns"/><b>10 touchdowns pace!</b></h4>
+				  		</div>
+				  		<div class="stats_icon" *ngFor="let stat of stats">
+				  			<h4 class="card-text" *ngIf="stat.FPTS < number.seasonPts * 1.4;else worseProjected"><img src="https://upload.wikimedia.org/wikipedia/commons/8/81/Simpleicons_Business_rising-bar-graph-with-arrow-up.svg" alt="graph going up" class="better_projection"/><b>Better than projected!</b></h4>	
+	        				<ng-template #worseProjected><h4 class="card-text"><img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Octicons-arrow-down.svg" alt="arrow down" class="worse_projection"/><b>Worse than projected.</b></h4></ng-template>
+	        			</div>
+	        			<div class="stats_icon">
+	        				<h4 class="card-text" *ngIf="number.seasonPts > 150;else benchPlayer"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/American_football_icon.svg"alt="football helmet" class="starter"/><b>Starter</b></h4>
+	        				<ng-template #benchPlayer><h4 class="card-text"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/ClipboardClipart.svg" alt="clipboard" class="bench_player"/><b>Bench Player</b></h4></ng-template>
+	        			</div>		
+				  	</div>
+				  	<div *ngIf="TE">
+				  		<h4>2019 Stats: </h4>
+				  		<p><b>Receptions: {{number.stats[20]}}, </b></p>
+				  		<p><b>Receiving Yards: {{number.stats[21]}}, </b></p>
+				  		<p *ngIf="number.stats[22];else noRecTDs"><b>Receiving Touchdowns: {{number.stats[22]}}, </b></p><ng-template #noRecTDs><p><b>Receiving Touchdowns: 0, </b></p></ng-template>
+				  		<p *ngIf="number.stats[31];else noFums"><b>Fumbles: {{number.stats[31]}}</b></p><ng-template #noFums><p><b>Fumbles: 0</b></p></ng-template>
+				  		<br/>
+				  		<div class="stats_icon">
+				  			<h4 class="card-text" *ngIf="number.stats[21] >= 687"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/AmFBfield.svg" alt="football field" class="yardage"/><b>1000 yard receiving pace!</b></h4>
+				  		</div>
+				  		<div class="stats_icon">
+				  			<h4 class="card-text" *ngIf="number.stats[22] >= 7"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Scoreboard_FB.JPG" alt="scoreboard" class="touchdowns"/><b>10 touchdowns pace!</b></h4>
+				  		</div>
+				  		<div class="stats_icon" *ngFor="let stat of stats">
+				  			<h4 class="card-text" *ngIf="stat.FPTS < number.seasonPts * 1.4;else worseProjected"><img src="https://upload.wikimedia.org/wikipedia/commons/8/81/Simpleicons_Business_rising-bar-graph-with-arrow-up.svg" alt="graph going up" class="better_projection"/><b>Better than projected!</b></h4>	
+	        				<ng-template #worseProjected><h4 class="card-text"><img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Octicons-arrow-down.svg" alt="arrow down" class="worse_projection"/><b>Worse than projected.</b></h4></ng-template>
+	        			</div>
+	        			<div class="stats_icon">
+	        				<h4 class="card-text" *ngIf="number.seasonPts > 110;else benchPlayer"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/American_football_icon.svg"alt="football helmet" class="starter"/><b>Starter</b></h4>
+	        				<ng-template #benchPlayer><h4 class="card-text"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/ClipboardClipart.svg" alt="clipboard" class="bench_player"/><b>Bench Player</b></h4></ng-template>
+	        			</div>		
+				  	</div>
+				</div>
+	            <br />
+	            <a routerLink='/team' class="btn btn-success">Back to Team</a>
+	          </div> 
+	        </div>       
+	     </div>	     
+	   </div>
+
+	   <div class="row" *ngIf="QB">
+	   		<h2 class="small_headline">Other Quarterbacks:</h2>	
+	   		<div class="card-group">
+	   			<div class="col-2" *ngFor="let small_player of players">
+		   			<a routerLink="/playerdetail/{{small_player.id}}" (click)="getSmallPlayer(small_player.id)" *ngIf="QB && small_player.position == 'QB'">
+					   	<div class="card small_player" appHighlight>
+							<img class="card-img-top logo" src={{small_player.logo}} alt={{small_player.alt}} />	
+							<div class="card-block">                 
+								<h4 class="card-title">{{small_player.name}}</h4>	                  
+								<p class="card-text"><b>{{small_player.position}} - {{small_player.team}}</b></p>
+							</div>
+						</div>
+					</a>		
+		    	</div>
+			</div>
+		</div>
+		<div class="row" *ngIf="RB">
+			<h2 class="small_headline" *ngIf="RB">Other Running Backs:</h2>
+			<div class="card-group">
+	   			<div class="col-2" *ngFor="let small_player of players">
+		   			<a routerLink="/playerdetail/{{small_player.id}}" (click)="getSmallPlayer(small_player.id)" *ngIf="RB && small_player.position == 'RB'">
+					   	<div class="card small_player" appHighlight>
+							<img class="card-img-top logo" src={{small_player.logo}} alt={{small_player.alt}} />	
+							<div class="card-block">                 
+								<h4 class="card-title">{{small_player.name}}</h4>	                  
+								<p class="card-text"><b>{{small_player.position}} - {{small_player.team}}</b></p>
+							</div>
+						</div>
+					</a>		
+		    	</div>
+			</div>
+		</div>
+		<div class="row" *ngIf="WR">
+			<h2 class="small_headline" *ngIf="WR">Other Wide Receivers:</h2>
+			<div class="card-group">
+	   			<div class="col-2" *ngFor="let small_player of players">
+		   			<a routerLink="/playerdetail/{{small_player.id}}" (click)="getSmallPlayer(small_player.id)" *ngIf="WR && small_player.position == 'WR'" id="small_link">
+					   	<div class="card small_player" appHighlight>
+							<img class="card-img-top logo" src={{small_player.logo}} alt={{small_player.alt}} />	
+							<div class="card-block">                 
+								<h4 class="card-title">{{small_player.name}}</h4>	                  
+								<p class="card-text"><b>{{small_player.position}} - {{small_player.team}}</b></p>
+							</div>
+						</div>
+					</a>		
+		    	</div>
+			</div>
+		</div>
+		<div class="row" *ngIf="TE">
+			<h2 class="small_headline" *ngIf="TE">Other Tight Ends:</h2>
+			<div class="card-group">
+	   			<div class="col-2" *ngFor="let small_player of players">
+		   			<a routerLink="/playerdetail/{{small_player.id}}" (click)="getSmallPlayer(small_player.id)" *ngIf="TE && small_player.position == 'TE'">
+					   	<div class="card small_player" appHighlight>
+							<img class="card-img-top logo" src={{small_player.logo}} alt={{small_player.alt}} />	
+							<div class="card-block">                 
+								<h4 class="card-title">{{small_player.name}}</h4>	                  
+								<p class="card-text"><b>{{small_player.position}} - {{small_player.team}}</b></p>
+							</div>
+						</div>
+					</a>		
+		    	</div>
+			</div>
+		</div>
+	</div>
+</div> 

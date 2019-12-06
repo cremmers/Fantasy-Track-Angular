@@ -1,0 +1,52 @@
+<div id="stats_list" *ngFor="let stat of stats">
+	<div *ngIf="QB">
+		<p><b>Projected 2019 Stats: </b></p>
+  		<p>Passing Yards: {{stat.YDS.toFixed()}}, Passing Touchdowns: {{stat.TDS.toFixed()}}, Interceptions: {{stat.INTS.toFixed()}}, Rushing Yards: {{stat.YDS_1.toFixed()}}, Rushing Touchdowns: {{stat.TDS_1.toFixed()}}, Fumbles: {{stat.FL.toFixed()}}</p>
+  	</div>
+  	<div *ngIf="RB">
+  		<p><b>Projected 2019 Stats: </b></p>
+  		<p>Rushing Yards: {{stat.YDS.toFixed()}}, Rushing Touchdowns: {{stat.TDS.toFixed()}}, Fumbles: {{stat.FL.toFixed()}}, Receptions: {{stat.REC.toFixed()}}, Receiving Yards: {{stat.YDS_1.toFixed()}}, Receiving Touchdowns: {{stat.TDS_1.toFixed()}}</p>
+  	</div>
+  	<div *ngIf="WR">
+  		<p><b>Projected 2019 Stats: </b></p>
+  		<p>Receptions: {{stat.REC.toFixed()}}, Receiving Yards: {{stat.YDS.toFixed()}}, Receiving Touchdowns: {{stat.TDS.toFixed()}}, Fumbles: {{stat.FL.toFixed()}}</p>
+  	</div>
+  	<div *ngIf="TE">
+  		<p><b>Projected 2019 Stats: </b></p>
+  		<p>Receptions: {{stat.REC.toFixed()}}, Receiving Yards: {{stat.YDS.toFixed()}}, Receiving Touchdowns: {{stat.TDS.toFixed()}}, Fumbles: {{stat.FL.toFixed()}}</p>
+  	</div>
+</div>
+<div id="numbers_list" *ngFor="let number of numbers">
+	<div *ngIf="QB && number.id != 2562619">
+		<p><b>2019 Stats: </b></p>
+  		<p>Passing Yards: {{number.stats[5]}}, </p>
+      <p  *ngIf="number.stats[6];else noPassTDs">Passing Touchdowns: {{number.stats[6]}},  </p><ng-template #noPassTDs><p>Passing Touchdowns: 0, </p></ng-template>
+      <p *ngIf="number.stats[7];else noInts">Interceptions: {{number.stats[7]}}, </p><ng-template #noInts><p>Interceptions: 0, </p></ng-template>
+      <p  *ngIf="number.stats[14];else noRushYDs">Rushing Yards: {{number.stats[14]}}, </p><ng-template #noRushYDs><p>Rushing Yards: 0, </p></ng-template>
+      <p  *ngIf="number.stats[15];else noRushTDs">Rushing Touchdowns: {{number.stats[15]}}, </p><ng-template #noRushTDs><p>Rushing Touchdowns: 0, </p></ng-template>
+      <p *ngIf="number.stats[31];else noFums">Fumbles: {{number.stats[31]}}</p><ng-template #noFums><p> Fumbles: 0</p></ng-template>
+  	</div>
+  	<div *ngIf="RB">
+  		<p><b>2019 Stats: </b></p>
+  		<p>Rushing Yards: {{number.stats[14]}}, </p>
+      <p  *ngIf="number.stats[15];else noRushTDs">Rushing Touchdowns: {{number.stats[15]}}, </p><ng-template #noRushTDs><p>Rushing Touchdowns: 0, </p></ng-template>
+      <p *ngIf="number.stats[31];else noFums">Fumbles: {{number.stats[31]}}, </p><ng-template #noFums><p>Fumbles: 0, </p></ng-template>
+      <p *ngIf="number.stats[20];else noRecs">Receptions: {{number.stats[20]}}, </p><ng-template #noRecs><p>Receptions: 0, </p></ng-template>
+      <p *ngIf="number.stats[15];else noRecYDs">Receiving Yards: {{number.stats[21]}}, </p><ng-template #noRecYDs><p>Receiving Yards: 0, </p></ng-template>
+      <p *ngIf="number.stats[22];else noRecTDs">Receiving Touchdowns: {{number.stats[22]}}</p><ng-template #noRecTDs><p>Receiving Touchdowns: 0</p></ng-template>
+  	</div>
+  	<div *ngIf="WR && number.id != 2535687">
+  		<p><b>2019 Stats: </b></p>
+      <p>Receptions: {{number.stats[20]}}, </p>
+  		<p>Receiving Yards: {{number.stats[21]}}, </p>
+      <p *ngIf="number.stats[22];else noRecTDs">Receiving Touchdowns: {{number.stats[22]}}, </p><ng-template #noRecTDs><p>Receiving Touchdowns: 0, </p></ng-template>
+      <p *ngIf="number.stats[31];else noFums">Fumbles: {{number.stats[31]}}</p><ng-template #noFums><p>Fumbles: 0</p></ng-template>
+  	</div>
+  	<div *ngIf="TE">
+  		<p><b>2019 Stats: </b></p>
+      <p>Receptions: {{number.stats[20]}}, </p>
+  		<p>Receiving Yards: {{number.stats[21]}}, </p>
+      <p *ngIf="number.stats[22];else noRecTDs">Receiving Touchdowns: {{number.stats[22]}}, </p><ng-template #noRecTDs><p>Receiving Touchdowns: 0, </p></ng-template>
+      <p *ngIf="number.stats[31];else noFums">Fumbles: {{number.stats[31]}}</p><ng-template #noFums><p>Fumbles: 0</p></ng-template>
+  	</div>
+</div>

@@ -1,0 +1,441 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"TDS",
+				"TDS__1"
+			],
+			[
+				"YDS",
+				"YDS__1"
+			],
+			[
+				"get",
+				"getPlayer\tmethod"
+			],
+			[
+				"play",
+				"player_elements\tlet"
+			],
+			[
+				"player",
+				"playerid_array\tlet"
+			],
+			[
+				"i",
+				"inline\tdisplay"
+			],
+			[
+				"p",
+				"player_array\tproperty"
+			],
+			[
+				"swi",
+				"switchAll\talias"
+			],
+			[
+				"team",
+				"team_id\tlet"
+			],
+			[
+				"inline",
+				"inline-block\tdisplay"
+			],
+			[
+				"Plyae",
+				"PlayerService\talias"
+			],
+			[
+				"qu",
+				"querySelectorAll\tmethod"
+			],
+			[
+				"palyer",
+				"playerIds\tproperty"
+			],
+			[
+				"inn",
+				"innerHTML\tproperty"
+			],
+			[
+				"inner",
+				"innerText\tproperty"
+			],
+			[
+				"player_",
+				"player_elements\tlet"
+			],
+			[
+				"child",
+				"childNodes\tproperty"
+			],
+			[
+				"create",
+				"createText\tmethod"
+			],
+			[
+				"c",
+				"createElement\tmethod"
+			],
+			[
+				"paren",
+				"parent_li\tlet"
+			],
+			[
+				"After",
+				"AfterViewInit\talias"
+			],
+			[
+				"remove",
+				"removeChild\tmethod"
+			],
+			[
+				"HOst",
+				"HostListener\talias"
+			],
+			[
+				"Ele",
+				"ElementRef\talias"
+			],
+			[
+				"Re",
+				"RendererFactory2\talias"
+			],
+			[
+				"Render",
+				"Renderer2\talias"
+			],
+			[
+				"delete",
+				"delete_player\tconst"
+			],
+			[
+				"dlete",
+				"delete_player\tconst"
+			],
+			[
+				"g",
+				"getElementById\tmethod"
+			],
+			[
+				"append",
+				"appendChild\tmethod"
+			],
+			[
+				"pl",
+				"player_li\tlet"
+			],
+			[
+				"pro",
+				"process-httpmsg.service\tscript"
+			],
+			[
+				"f",
+				"feedbackForm\tproperty"
+			],
+			[
+				"Ob",
+				"Observable\talias"
+			],
+			[
+				"Pro",
+				"Promotion\talias"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Discover Packages"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"enab",
+				"Package Control: Enable Package"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"instl",
+				"Package Control: Install Package"
+			],
+			[
+				"TypeScript",
+				"Set Syntax: AppleScript"
+			],
+			[
+				"install package",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 136.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/dishdetail/dishdetail.component.ts",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/services/team.service.ts",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/services/player.service.ts",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/services/in-memory-data.service.ts",
+		"/Users/chrisremmers/fantasy-track-angular/src/assets/2019_RB_Projected_Stats.json",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/services/dish.service.ts",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/playerdetail/playerdetail.component.ts",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/playerdetail/playerdetail.component.html",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/shared/stats.ts",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/shared/player.ts",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/players/players.component.html",
+		"/Users/chrisremmers/fantasy-track-react/imports/ui/Team.js",
+		"/Users/chrisremmers/fantasy-track-react/imports/ui/TeamPageProjections.js",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/stats/stats.component.ts",
+		"/Users/chrisremmers/fantasy-track-angular/src/assets/2019_QB_Projected_Stats.json",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/app.module.ts",
+		"/Users/chrisremmers/fantasy-track-react/imports/ui/PlayerPageProjections.js",
+		"/Users/chrisremmers/fantasy-track-angular/src/assets/2019_WR_Projected_Stats.json",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/services/message.service.ts",
+		"/Users/chrisremmers/fantasy-track-angular/src/index.html",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/app.component.css",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/header/header.component.html",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/app.component.html",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/projected_stats.ts",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/app.component.ts",
+		"/Users/chrisremmers/fantasy-track-angular/src/styles.css",
+		"/Users/chrisremmers/fantasy-track-angular/src/favicon.ico",
+		"/Users/chrisremmers/fantasy-track-react/imports/ui/PlayerList.js",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/players/players.component.css",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/contact/contact.component.ts",
+		"/Users/chrisremmers/fantasy-track-react/imports/ui/LoadTeam.js",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/teams/teams.component.css",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/shared/team.ts",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/services/message.service.spec.ts",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/routing/routes.ts",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/routing/routing.module.ts",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/services/save-team.service.ts",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/teams/teams.component.html",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/teams/teams.component.ts",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/player_list.ts",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/message.service.ts",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/in-memory-data.service.ts",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/playerdetail/playerdetail.component.css",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/services/create-elements.service.ts",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/app-routing/routes.ts",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/app-routing/app-routing.module.ts",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/routing/routing.module.spec.ts",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/routing/routing.component.ts",
+		"/Users/chrisremmers/Library/Application Support/Sublime Text 3/Packages/TypeScript/TypeScript.sublime-settings",
+		"/Users/chrisremmers/Library/Application Support/Sublime Text 3/Packages/User/TypeScript.sublime-settings",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/button/button.component.ts",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/header/header.component.css",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/create-elements.service.ts",
+		"/Users/chrisremmers/fantasy-track/imports/ui/body.js",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/player_data.ts",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/player_data.js",
+		"/Users/chrisremmers/fantasy-track-angular/src/app/header/header.component.ts",
+		"/Users/chrisremmers/fantasy-track-react/imports/ui/AccountsUIWrapper.js",
+		"/Users/chrisremmers/fantasy-track-react/imports/api/teams.js",
+		"/Users/chrisremmers/fantasy-track-react/imports/ui/Player.js",
+		"/Users/chrisremmers/fantasy-track-react/imports/ui/App.js",
+		"/Users/chrisremmers/fantasy-track-react/imports/api/players.js",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/app.module.ts",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/menu/menu.component.spec.ts",
+		"/Users/chrisremmers/coursera-angular/conFusion/e2e/src/app.po.ts",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/test.ts",
+		"/Users/chrisremmers/coursera-angular/conFusion/e2e/src/app.e2e-spec.ts",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/dishdetail/dishdetail.component.html",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/contact/contact.component.html",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/services/feedback.service.ts",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/home/home.component.html",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/home/home.component.ts",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/animations/app.animation.ts",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/menu/menu.component.html",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/menu/menu.component.ts",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/services/leader.service.ts",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/services/process-httpmsg.service.ts",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/shared/feedback.ts",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/about/about.component.ts",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/about/about.component.html",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/shared/dish.ts",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/services/promotion.service.ts",
+		"/Users/chrisremmers/confusion/json-server/db.json",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/directives/highlight.directive.ts",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/styles.scss",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/services/ProcessHTTPMsg.ts",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/shared/baseurl.ts",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/baseurl.ts",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/shared/comment.ts",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/login/login.component.ts",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/login/login.component.html",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/shared/dishes.ts",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/header/header.component.html",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/contact/contact.component.scss",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/header/header.component.ts",
+		"/Users/chrisremmers/coursera-angular/conFusion/src/app/menu/menu.component.scss"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "stats.component.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 294.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,29 @@
+#back_home {
+    margin: 5px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+#team_list li p {
+    display: inline;
+    color: #337ab7;
+}
+
+#team_list a {
+    text-decoration: none;
+}
+
+#team_header {
+	text-align: center;
+    color: #337ab7;
+}
+
+.highlight {
+    background-color: #d3d3d3;
+    border: 1px solid grey;
+    z-index: 1;
+    transform: scale(1.01);
+}
